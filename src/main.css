@@ -20,6 +20,9 @@ height: 100%;
 align-items: center;
 justify-content: center;
 }
+.gallery-sect {
+  width: 100%;
+}
 .input-search {
     width: 60%;
     height: 80%;
@@ -106,4 +109,26 @@ button:hover {
   }
 .input-search:focus {
     border: 0;
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFFFFF;
+  flex-wrap: wrap;
+}
+.main-gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+}
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 20px;
 }

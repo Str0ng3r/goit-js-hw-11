@@ -8,14 +8,16 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-<section>
   <header>
     <div class="container">
-    <form class="form-search" action="">
-    <input class="input-search" type="text">
+    <form class="form-search" id="search-form">
+    <input class="input-search" type="text" name="searchQuery" autocomplete="off" placeholder="Search images...">
     <button class="button-search" type="submit">SEARCH</button>
-  </form></header>
+  </form>
 </div>
+</header>
+<section class="gallery-sect">
+  <div class="main-gallery"></div>
 </section>
   </body>
 </html>
