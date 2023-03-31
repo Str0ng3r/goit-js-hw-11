@@ -1,3 +1,6 @@
+
+
+
 body {
     background-color: #212121;
     margin: 0;
@@ -13,6 +16,16 @@ width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
+.container-gallery {
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column ;
+}
 .form-search {
 display: flex;
 width: 100%;
@@ -22,6 +35,9 @@ justify-content: center;
 }
 .gallery-sect {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input-search {
     width: 60%;
@@ -53,7 +69,7 @@ justify-content: center;
     -moz-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
-button:hover {
+.button-search:hover {
     background: rgb(61, 106, 255);
     box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
     -webkit-transition: all 0.2s ease-out;
@@ -61,13 +77,13 @@ button:hover {
     transition: all 0.2s ease-out;
   }
   
-  button:hover::before {
+  .button-search:hover::before {
     -webkit-animation: sh02 0.5s 0s linear;
     -moz-animation: sh02 0.5s 0s linear;
     animation: sh02 0.5s 0s linear;
   }
   
-  button::before {
+  .button-search::before {
     content: '';
     display: block;
     width: 0px;
@@ -101,7 +117,7 @@ button:hover {
     }
   }
   
-  button:active {
+  .load:active {
     box-shadow: 0 0 0 0 transparent;
     -webkit-transition: box-shadow 0.2s ease-in;
     -moz-transition: box-shadow 0.2s ease-in;
@@ -128,7 +144,99 @@ button:hover {
 .photo-card {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 300px;
+  overflow: hidden;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 10px;
+}
+.link-img {
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+}
+.size-img {
+  width: 100%;
+  height: 100%;
+}
+.non-display {
+  display: none;
+}
+.have-display {
+  display: block;
+}
+.load {
+  margin: 0 auto;
+  border: 0;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.load:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.load:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.load::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.load:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
 }
